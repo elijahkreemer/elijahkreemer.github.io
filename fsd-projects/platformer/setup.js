@@ -100,5 +100,6 @@ var collectableList = {
   steve: { image: "images/collectables/steve-head.png" },
   purpleDiamond: { image: "images/collectables/purple diamond.png" },
   blueStar: { image: "images/collectables/blue star.png" },
+  sonicRing: { image: "images/collectables/sonic ring.png" },
 };
 
