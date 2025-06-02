@@ -43,17 +43,19 @@ $(function () {
 
 
     // TODO 3 - Create Collectables
-    createCollectable("diamond", 300, 350, 0.5, 1);
-    createCollectable("steve", 500, 500, 0.5, 1);
+    createCollectable("metalSonic", 300, 350, 0.5, 1);
+    createCollectable("redDiamond", 500, 500, 0.5, 1);
     createCollectable("purpleDiamond", 1100, 100, 1.0, 1);
     createCollectable("blueStar", 1200, 600, 1.0, 1);
     createCollectable("sonicRing",900, 450, 0.5, 1);
+    
 
     // TODO 4 - Create Cannons
     createCannon("left", 450, 2000);
     createCannon("bottom", 350, 2000);
     createCannon("top", 800, 450);
     createCannon("right", 150, 3000);
+    createCannon("top", 1250, 2000);
     
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
