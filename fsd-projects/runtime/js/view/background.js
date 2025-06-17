@@ -41,8 +41,14 @@ var background = function (window) {
             // TODO 1:
             // this currently fills the background with an obnoxious yellow;
             // you should modify both the height and color to suit your game
-            var backgroundFill = draw.rect(canvasWidth, groundY,'blue');
-            background.addChild(backgroundFill);
+                var backgroundImage = new Image();
+                backgroundImage.src = "img/runtime background.jpg";
+                backgroundImage.onload = function() {
+                var backgroundFill = new createjs.Bitmap(backgroundImage);               
+                backgroundFill.scaleX = app.canvas.width / backgroundImage.width;
+                backgroundFill.scaleY = groundY / backgroundImage.height;
+                background.addChildAt(backgroundFill, 0); 
+            };
             
             // TODO 2: - Add a moon and starfield
            
@@ -63,7 +69,7 @@ var background = function (window) {
             
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             for(var i = 0; i < 5; i++){
-                var buildingColors = ["lightblue", "green", "yellow", "maroon", "orange"];
+                var buildingColors = ["grey", "grey", "grey", "grey", "grey"];
                 var buildingHeight = 200 * Math.random();
                 var building = draw.rect(75, buildingHeight, buildingColors[i], "LightGray", "Black", 1);
                 building.x = 200 * i;
