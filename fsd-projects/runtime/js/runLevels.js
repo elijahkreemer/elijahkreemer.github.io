@@ -83,11 +83,13 @@ var runLevels = function (window) {
       };
     }
 
-    function createMarker (x, y, speed){
+    function createMarker (x, y, speed, image, scale, offsetX, offsetY){
       var marker = game.createGameItem("reward", 25);
-      var yellowSquare = draw.rect(50, 50, "yellow");
-      yellowSquare.x = -25;
-      yellowSquare.y = -25;
+      var yellowSquare = draw.bitmap(image);
+      yellowSquare.x = offsetX;
+      yellowSquare.y = offsetY;
+      yellowSquare.scaleX = scale;
+      yellowSquare.scaleY = scale;
       marker.addChild(yellowSquare);
       marker.x = x;
       marker.y = y;
@@ -132,7 +134,7 @@ var runLevels = function (window) {
         }
 
         if(element.type === "marker"){
-          createMarker(element.x, element.y, element.speed);
+          createMarker(element.x, element.y, element.speed, element.image, element.scale, element.offsetX, element.offsetY);
         }
 
       }

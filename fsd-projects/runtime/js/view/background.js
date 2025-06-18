@@ -51,7 +51,7 @@ var background = function (window) {
             };
             
             // TODO 2: - Add a moon and starfield
-           
+           /*
             for(var i = 0; i < 100; i++){
                 var circle = draw.circle(3, "white", "LightGray", 2);
                 circle.x = canvasWidth * Math.random();
@@ -65,7 +65,7 @@ var background = function (window) {
             moon.scaleX = 0.5;
             moon.scaleY = 0.5;
             background.addChild(moon);
-            
+            */
             
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             for(var i = 0; i < 5; i++){
@@ -77,13 +77,13 @@ var background = function (window) {
                 background.addChild(building);
                 buildings.push(building);
             }
-            
+            /*
             // TODO 3: Part 1 - Add a tree
             tree = draw.bitmap("img/tree.png");
             tree.x = 300;
             tree.y = groundY - 225;
             background.addChild(tree);
-
+            */
 
             
         } // end of render function - DO NOT DELETE
@@ -98,11 +98,11 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 3: Part 2 - Move the tree!
-            tree.x = tree.x -= 4;
+            /*tree.x = tree.x -= 4;
 
             if(tree.x < -250){
                 tree.x = canvasWidth + 100
-            }
+            } */
             
             // TODO 4: Part 2 - Parallax
 
